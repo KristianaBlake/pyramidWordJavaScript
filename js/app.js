@@ -11,28 +11,41 @@
 
 
 const check = {
-	
-	word(pyramidWord) {
 
-		let freq = {};
+	// freq: null,
 
-		function getFrequency(pyramidWord) {
+	getFrequency(pyramidWord) {
 
-			for (let i = 0; i < pyramidWord.length; i++ ){
-				let character = pyramidWord.charAt(i);
-				if (freq[character]){
-					freq[character]++;
-				} else {
-					freq[character] = 1;
-				}
+		let freq = [];
+
+		for (let i = 0; i < pyramidWord.length; i++ ){
+
+			let character = pyramidWord.charAt(i);
+
+			if (freq[character]){
+				freq[character]++;
+			} else {
+				freq[character] = 1;
 			}
-
-
-		return freq;
-		console.log(freq);
-
 		}
 
+		// prints freq - console stops printing after this line 
+		console.log(freq);
+		this.isIncreasing(freq);
+
+	},
+
+	isIncreasing(freq) {
+
+		let word = [];
+
+		for (let i = 0; i < freq.length -1 ; i++) {
+			if (freq[i + 1] - freq[i] === 1 || freq[i + 1] - freq[i] === -1) {
+				return true;
+			} else {
+				return false; 
+			}
+		}	
 
 	}
 
@@ -50,7 +63,7 @@ $('form').on('submit', (event) => {
 
 	let pyramidWord = $('#input-box').val()
 	console.log( $('#input-box').val() );
-	check.word(pyramidWord)
-	console.log( check.word(pyramidWord) );
+	check.getFrequency(pyramidWord)
+	console.log( check.getFrequency(pyramidWord) );
 })
 
