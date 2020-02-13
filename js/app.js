@@ -16,6 +16,7 @@ const check = {
 
 		let newWord = "";
 		let lowerCaseWord = "";
+		let freq = {};
 
 		if (!string){
 
@@ -38,9 +39,25 @@ const check = {
 		lowerCaseWord = newWord.toLowerCase()
 		console.log(lowerCaseWord);
 
+		for (let i = 0; i < lowerCaseWord.length; i++){
+
+			let reptChar = lowerCaseWord.charAt(i);
 
 
+			if (freq[reptChar]){
 
+				freq[reptChar]++;
+
+			} else {
+
+				freq[reptChar] = 1;
+			}
+
+			console.log(freq);
+
+		}
+
+		console.log(lowerCaseWord);
 
 	}
 
