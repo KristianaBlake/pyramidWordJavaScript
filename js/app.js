@@ -15,6 +15,7 @@ const check = {
 	isIncreasing(string) {
 
 		let newWord = "";
+		let lowerCaseWord = "";
 
 		if (!string){
 
@@ -33,6 +34,11 @@ const check = {
 			}
 
 		}
+
+		lowerCaseWord = newWord.toLowerCase()
+		console.log(lowerCaseWord);
+
+
 
 
 
