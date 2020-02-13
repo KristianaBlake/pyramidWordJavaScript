@@ -13,14 +13,32 @@
 const check = {
 
 	isIncreasing(string) {
-		 if (!string){
-		 	return false;
-		 }
+
+		let newWord = "";
+
+		if (!string){
+
+			return false;
+
+		} else {
+
+			for (let i = 0; i < string.length; i++){
+				 if (string[i] != " "){
+				 	newWord += string[i];
+				 	console.log(newWord);
+				 } else {
+				 	return false;
+				 }
+				 
+			}
+
+		}
+
+
+
 	}
 
-
 }
-
 
 
 $('form').on('submit', (event) => {
