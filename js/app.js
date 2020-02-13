@@ -1,6 +1,6 @@
 
 // arrange the letters in increasing frequency 
-	// starting with 1 and continuing without gaps and without duplicates
+// 	starting with 1 and continuing without gaps and without duplicates
 
 
 // make sure that only pyramid words return true and 
@@ -12,41 +12,6 @@
 
 const check = {
 
-	freq: [],
-
-	getFrequency(pyramidWord) {
-
-		// let freq = [];
-
-		for (let i = 0; i < pyramidWord.length; i++ ){
-
-			let character = pyramidWord.charAt(i);
-
-			if (this.freq[character]){
-				this.freq[character]++;
-			} else {
-				this.freq[character] = 1;
-			}
-		}
- 
-		console.log(this.freq); //console stop printing at this line 
-		this.isIncreasing();
-
-	},
-
-	isIncreasing(freq) {
-
-		let word = [];
-
-		for (let i = 0; i < this.freq.length -1 ; i++) {
-			if (this.freq[i + 1] - this.freq[i] === 1 || this.freq[i + 1] - this.freq[i] === -1) {
-				return true;
-			} else {
-				return false; 
-			}
-		}	
-
-	}
 
 }
 
