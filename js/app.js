@@ -12,6 +12,12 @@
 
 const check = {
 
+	isIncreasing(string) {
+		 if (!string){
+		 	return false;
+		 }
+	}
+
 
 }
 
@@ -25,12 +31,12 @@ $('form').on('submit', (event) => {
 	console.log('clicked');
 
 
-	let pyramidWord = $('#input-box').val()
+	let string = $('#input-box').val()
 	console.log( $('#input-box').val() );
 
 	
-	check.getFrequency(pyramidWord)
-	console.log( check.getFrequency(pyramidWord), "<-- getFrequency value" ); // returns undefined 
+	check.isIncreasing(string)
+	console.log( check.isIncreasing(string), "<-- isIncreasing value" ); // returns undefined 
 })
 
 
