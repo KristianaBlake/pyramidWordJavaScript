@@ -1,4 +1,3 @@
-
 // arrange the letters in increasing frequency 
 // 	starting with 1 and continuing without gaps and without duplicates
 
@@ -16,7 +15,8 @@ const check = {
 
 		let newWord = "";
 		let lowerCaseWord = "";
-		let freq = {};
+		let freq = [];
+		let startingFreq = 1;
 
 		if (!string){
 
@@ -27,26 +27,25 @@ const check = {
 			for (let i = 0; i < string.length; i++){
 				 if (string[i] != " "){
 				 	newWord += string[i];
-				 	console.log(newWord);
 				 } else {
 				 	return false;
-				 }
-				 
+				 } 
 			}
 
 		}
 
 		lowerCaseWord = newWord.toLowerCase()
-		console.log(lowerCaseWord);
 
 		for (let i = 0; i < lowerCaseWord.length; i++){
 
+			// returns the character at the specified index from lowerCaseWord
 			let reptChar = lowerCaseWord.charAt(i);
-
 
 			if (freq[reptChar]){
 
-				freq[reptChar]++;
+				freq.push(freq[reptChar]++)
+				console.log(freq);
+
 
 			} else {
 
@@ -54,10 +53,11 @@ const check = {
 			}
 
 			console.log(freq);
+			console.log(freq.length);
 
 		}
 
-		console.log(lowerCaseWord);
+		console.log(freq.length);
 
 	}
 
