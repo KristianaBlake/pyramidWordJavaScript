@@ -45,16 +45,10 @@ const check = {
 
 $('form').on('submit', (event) => {
 	event.preventDefault();
-
 	// this reminds me that I clicked on the button
 	const inputBox = $('#input-box');
-	console.log('clicked');
-
-
 	let string = $('#input-box').val()
-	console.log( $('#input-box').val() );
 	
-	console.log(check.isIncreasing(string));
 })
 
 
