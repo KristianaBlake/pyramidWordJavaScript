@@ -4,9 +4,6 @@ const check = {
 	isIncreasing(string) {
 
 		let checkWord = string.trim().toLowerCase()
-		// console.log(checkWord);
-		// let entries = JSON.parse(checkWord)
-		// console.log(entries);
 
 		let freq = {};
 
@@ -39,7 +36,7 @@ const check = {
 				return false;
 			}
 		}
-		
+
 		return true;
 
 	}
