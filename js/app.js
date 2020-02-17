@@ -22,27 +22,24 @@ const check = {
 			}
 		}
 
-		console.log(freq);
-
+		// storing the values from the object "freq" and storing 
+		// them into the variable values 
 		let values = Object.values(freq)
 
+		// this is sorting the values in increasing order 
 		values.sort(function(a, b){
 			return a - b;
 		})
 
-
-		console.log(values);
-
 		let startingFreq = 1 
 		for (i = 0; i < values.length; i++){
-			// console.log("values[i] " + values[i]);
-			// console.log("startingFreq " + startingFreq);
 			if (values[i] === startingFreq){
 				startingFreq++
 			} else {
 				return false;
 			}
 		}
+		
 		return true;
 
 	}
